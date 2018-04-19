@@ -1,14 +1,15 @@
 pipeline {
-  agent any
-  stages {
-    stage('Hello World') {
-      steps {
-        echo 'Hello, there!'
-        echo 'Hello again'
-      }
+  agent {
+    docker {
+      image 'golang:1.10.1-alpine'
+      label 'docker-cloud'
     }
-    stage('') {
+    
+  }
+  stages {
+    stage('Say Hello') {
       steps {
+        echo 'Hello World!'
         sh 'java -version'
       }
     }
