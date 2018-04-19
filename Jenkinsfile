@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Say Hello') {
       steps {
-        echo "Hello ${MY_NAME}"
+        echo "Hello IN A BIG WAY ${MY_NAME}"
         echo "Hello to ${params.Name}"
         echo "${TEST_USER_USR}"
         echo "${TEST_USER_PSW}"
