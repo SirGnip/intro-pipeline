@@ -9,6 +9,14 @@ pipeline {
         echo "${TEST_USER_PSW}"
       }
     }
+    stage('Deploy') {
+      input {
+        message 'Should we continue?'
+      }
+      steps {
+        echo 'Continuing with deployment http://www.chicagotrading.com/'
+      }
+    }
   }
   environment {
     MY_NAME = 'Mary'
