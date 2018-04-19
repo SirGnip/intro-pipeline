@@ -11,10 +11,10 @@ pipeline {
         sh "env -v"
       }
     }
-    stage('Say Kernel') {
-      steps {
-        echo "${KERNEL_VERSION}"
-      }
+    stage('Shared Lib') {
+       steps {
+           helloWorld("Jenkins")
+       }
     }
   }
 }
